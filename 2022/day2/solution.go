@@ -1,7 +1,6 @@
 package day2
 
 import (
-	"fmt"
 	"strings"
 )
 
@@ -139,7 +138,7 @@ func newGuideLineResult(resultIn string) GuideLineResut {
 	return Won
 }
 
-func Solution1(input []string) {
+func Solution1(input []string) int64 {
 	var totalPoints int64
 	for _, strategyGuideLine := range input {
 		var (
@@ -151,10 +150,10 @@ func Solution1(input []string) {
 
 		totalPoints += yourPoints + yourChoose.ResultCompareObject(opponentChoose).Points()
 	}
-	fmt.Println(totalPoints)
+	return totalPoints
 }
 
-func Solution2(input []string) {
+func Solution2(input []string) int64 {
 	var totalPoints int64
 	for _, strategyGuideLine := range input {
 		var (
@@ -166,5 +165,5 @@ func Solution2(input []string) {
 		yourChoose := opponentChoose.GetChooseObjectTo(needsToEnd)
 		totalPoints += yourChoose.YourPoints() + needsToEnd.Points()
 	}
-	fmt.Println(totalPoints)
+	return totalPoints
 }

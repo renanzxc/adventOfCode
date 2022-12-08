@@ -14,7 +14,7 @@ import (
 )
 
 func main() {
-	var days = map[string]func(input []string){
+	var days = map[string]func(input []string) (result int64){
 		"1-1": day1.Solution1,
 		"1-2": day1.Solution2,
 		"2-1": day2.Solution1,
@@ -36,5 +36,5 @@ func main() {
 		filepathDay = filepath.Join(path, fmt.Sprintf("day%s", day), "input.txt")
 	)
 
-	days[dayIn](utils.ReadFile(filepathDay))
+	fmt.Println(days[dayIn](utils.ReadFile(filepathDay)))
 }

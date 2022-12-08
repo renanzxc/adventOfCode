@@ -2,16 +2,15 @@ package day3
 
 import (
 	"adventofcode/utils"
-	"fmt"
 )
 
 const (
-	numUpperCaseA = int('A')
-	numLowerCaseA = int('a')
+	numUpperCaseA = int64('A')
+	numLowerCaseA = int64('a')
 )
 
-func Solution1(input []string) {
-	var sum int
+func Solution1(input []string) int64 {
+	var sum int64
 	for _, line := range input {
 		equalsLetters := utils.Intersections([]rune(line[:len(line)/2]), []rune(line[len(line)/2:]))
 
@@ -26,11 +25,11 @@ func Solution1(input []string) {
 		sum += priority
 
 	}
-	fmt.Println(sum)
+	return sum
 }
 
-func Solution2(input []string) {
-	var sum int
+func Solution2(input []string) int64 {
+	var sum int64
 	for ii := 0; ii < len(input); ii++ {
 		equalsLetters := utils.Intersections([]rune(input[ii]), []rune(input[ii+1]), []rune(input[ii+2]))
 
@@ -45,11 +44,11 @@ func Solution2(input []string) {
 		sum += priority
 		ii += 2
 	}
-	fmt.Println(sum)
+	return sum
 }
 
-func gerNumLetter(letter rune) int {
-	numLetter := int(letter)
+func gerNumLetter(letter rune) int64 {
+	numLetter := int64(letter)
 	if numUpperCaseA <= numLetter && numLowerCaseA > numLetter {
 		return numLetter - 38
 	}

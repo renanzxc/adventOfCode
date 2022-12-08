@@ -2,14 +2,13 @@ package day4
 
 import (
 	"adventofcode/utils"
-	"fmt"
 	"log"
 	"strconv"
 	"strings"
 )
 
-func Solution1(input []string) {
-	var count int
+func Solution1(input []string) int64 {
+	var count int64
 	for _, line := range input {
 		initElfSections1, endElfSections1, initElfSections2, endElfSections2 := extractElfSections(line)
 
@@ -18,11 +17,11 @@ func Solution1(input []string) {
 			count++
 		}
 	}
-	fmt.Println(count)
+	return count
 }
 
-func Solution2(input []string) {
-	var count int
+func Solution2(input []string) int64 {
+	var count int64
 	for _, line := range input {
 		initElfSections1, endElfSections1, initElfSections2, endElfSections2 := extractElfSections(line)
 
@@ -38,7 +37,7 @@ func Solution2(input []string) {
 			count++
 		}
 	}
-	fmt.Println(count)
+	return count
 }
 
 func extractElfSections(line string) (initElfSections1, endElfSections1, initElfSections2, endElfSections2 int64) {

@@ -2,17 +2,16 @@ package day1
 
 import (
 	"adventofcode/utils"
-	"fmt"
 	"log"
 	"strconv"
 )
 
-func Solution1(input []string) {
-	fmt.Println(getMostCaloriesElfs(input, 1)[0])
+func Solution1(input []string) int64 {
+	return getMostCaloriesElfs(input, 1)[0]
 }
 
-func Solution2(input []string) {
-	fmt.Println(utils.Sum(getMostCaloriesElfs(input, 3)...))
+func Solution2(input []string) int64 {
+	return utils.Sum(getMostCaloriesElfs(input, 3)...)
 }
 
 func getMostCaloriesElfs(input []string, numElfs int64) []int64 {
