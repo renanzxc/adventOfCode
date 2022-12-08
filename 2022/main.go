@@ -3,6 +3,7 @@ package main
 import (
 	"adventofcode/day1"
 	"adventofcode/day2"
+	"adventofcode/day3"
 	"adventofcode/utils"
 	"fmt"
 	"log"
@@ -17,6 +18,8 @@ func main() {
 		"1-2": day1.Solution2,
 		"2-1": day2.Solution1,
 		"2-2": day2.Solution2,
+		"3-1": day3.Solution1,
+		"3-2": day3.Solution2,
 	}
 
 	path, err := os.Getwd()
