@@ -37,6 +37,12 @@ func InsertArray[T any](a []T, index int, value T) []T {
 	return a
 }
 
+//func InvertArray[T any](a []T) []T{
+//	var finalArray []T
+//
+//	for
+//}
+
 func Sum[T Numeric](num ...T) (total T) {
 	for ii := range num {
 		total += num[ii]

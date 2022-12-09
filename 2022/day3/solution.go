@@ -9,7 +9,7 @@ const (
 	numLowerCaseA = int64('a')
 )
 
-func Solution1(input []string) int64 {
+func Solution1(input []string) any {
 	var sum int64
 	for _, line := range input {
 		equalsLetters := utils.Intersections([]rune(line[:len(line)/2]), []rune(line[len(line)/2:]))
@@ -28,7 +28,7 @@ func Solution1(input []string) int64 {
 	return sum
 }
 
-func Solution2(input []string) int64 {
+func Solution2(input []string) any {
 	var sum int64
 	for ii := 0; ii < len(input); ii++ {
 		equalsLetters := utils.Intersections([]rune(input[ii]), []rune(input[ii+1]), []rune(input[ii+2]))

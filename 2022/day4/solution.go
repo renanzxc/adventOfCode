@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-func Solution1(input []string) int64 {
+func Solution1(input []string) any {
 	var count int64
 	for _, line := range input {
 		initElfSections1, endElfSections1, initElfSections2, endElfSections2 := extractElfSections(line)
@@ -20,7 +20,7 @@ func Solution1(input []string) int64 {
 	return count
 }
 
-func Solution2(input []string) int64 {
+func Solution2(input []string) any {
 	var count int64
 	for _, line := range input {
 		initElfSections1, endElfSections1, initElfSections2, endElfSections2 := extractElfSections(line)

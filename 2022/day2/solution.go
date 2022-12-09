@@ -138,7 +138,7 @@ func newGuideLineResult(resultIn string) GuideLineResut {
 	return Won
 }
 
-func Solution1(input []string) int64 {
+func Solution1(input []string) any {
 	var totalPoints int64
 	for _, strategyGuideLine := range input {
 		var (
@@ -153,7 +153,7 @@ func Solution1(input []string) int64 {
 	return totalPoints
 }
 
-func Solution2(input []string) int64 {
+func Solution2(input []string) any {
 	var totalPoints int64
 	for _, strategyGuideLine := range input {
 		var (

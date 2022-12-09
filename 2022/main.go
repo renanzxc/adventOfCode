@@ -5,6 +5,7 @@ import (
 	"adventofcode/day2"
 	"adventofcode/day3"
 	"adventofcode/day4"
+	"adventofcode/day5"
 	"adventofcode/utils"
 	"fmt"
 	"log"
@@ -14,7 +15,7 @@ import (
 )
 
 func main() {
-	var days = map[string]func(input []string) (result int64){
+	var days = map[string]func(input []string) (result any){
 		"1-1": day1.Solution1,
 		"1-2": day1.Solution2,
 		"2-1": day2.Solution1,
@@ -23,6 +24,8 @@ func main() {
 		"3-2": day3.Solution2,
 		"4-1": day4.Solution1,
 		"4-2": day4.Solution2,
+		"5-1": day5.Solution1,
+		"5-2": day5.Solution2,
 	}
 
 	path, err := os.Getwd()

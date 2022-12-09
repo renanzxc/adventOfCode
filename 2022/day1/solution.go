@@ -6,11 +6,11 @@ import (
 	"strconv"
 )
 
-func Solution1(input []string) int64 {
+func Solution1(input []string) any {
 	return getMostCaloriesElfs(input, 1)[0]
 }
 
-func Solution2(input []string) int64 {
+func Solution2(input []string) any {
 	return utils.Sum(getMostCaloriesElfs(input, 3)...)
 }
 
