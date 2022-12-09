@@ -16,16 +16,16 @@ func TestDay4(t *testing.T) {
 
 	input := utils.ReadFile(filepath.Join(path, "input.txt"))
 	t.Run("Solution1", func(t *testing.T) {
-		var expected int64 = 513
+		var expected  = "ZRLJGSCTR"
 		if result := Solution1(input); expected != result {
-			t.Fatalf(`Expected:%d Result:%d`, expected, result)
+			t.Fatalf(`Expected:%s Result:%s`, expected, result)
 		}
 	})
 
 	t.Run("Solution2", func(t *testing.T) {
-		var expected int64 = 878
+		var expected  = "PRTTGRFPB"
 		if result := Solution2(input); expected != result {
-			t.Fatalf(`Expected:%d Result:%d`, expected, result)
+			t.Fatalf(`Expected:%s Result:%s`, expected, result)
 		}
 	})
 }
