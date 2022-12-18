@@ -6,6 +6,7 @@ import (
 	"adventofcode/day3"
 	"adventofcode/day4"
 	"adventofcode/day5"
+	"adventofcode/day6"
 	"adventofcode/utils"
 	"fmt"
 	"log"
@@ -26,6 +27,8 @@ func main() {
 		"4-2": day4.Solution2,
 		"5-1": day5.Solution1,
 		"5-2": day5.Solution2,
+		"6-1": day6.Solution1,
+		"6-2": day6.Solution2,
 	}
 
 	path, err := os.Getwd()
