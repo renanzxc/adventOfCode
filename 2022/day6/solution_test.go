@@ -37,11 +37,11 @@ func TestDay6(t *testing.T) {
 				t.Fatalf(`Expected:%s Result:%s`, expected, result)
 			}
 		})
-		//t.Run("Input", func(t *testing.T) {
-		//	var expected any = 1623
-		//	if result := Solution1(input); expected != result {
-		//		t.Fatalf(`Expected:%s Result:%s`, expected, result)
-		//	}
-		//})
+		t.Run("Input", func(t *testing.T) {
+			var expected any = 3774
+			if result := Solution2(input); expected != result {
+				t.Fatalf(`Expected:%s Result:%s`, expected, result)
+			}
+		})
 	})
 }
